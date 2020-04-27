@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Надсилання файлів на пошту</title>
+  <meta name="description" content="Відправка файлів на пошту за допомогою PHPMailer">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/css.css" />
+</head>
+
+<body>
+<form enctype="multipart/form-data" method="post" id="form">
+ <div class="flexblock">
+   <div class="group">
+     <div class="input-wrap ">
+       <input name="name" id="name" type="text" class="form-input">
+       <label for="name" class="form-label">Введіть Ваше ім'я</label>
+	 </div>
+	 <div class="input-wrap ">
+	 	<input name="phone" id="phone" class="form-input">
+	 	<label for="phone" class="form-label">Введіть Ваш телефон</label>
+	 </div>
+     <div class="input-wrap ">
+       <input name="email" id="email" type="mail" class="form-input">
+       <label for="email" class="form-label">Введіть Ваш Email</label>
+     </div>
+   </div>
+   <div class="area-wrap right">
+     <textarea name="text" class="form-text" id="text"></textarea>
+     <label for="text" class="area-label">Залиште Ваше повідомлення</label>
+   </div>
+   <label for="myfile" class="file-label left">
+    <img src="img/upload.svg" alt="">
+    <p class="amount">Прикріпити файли</p>
+   </label>
+   <input type="file" class="my" id="myfile" name="myfile[]" multiple>
+
+   <button type="submit" class="button right">Надіслати</button>
+   </div>
+
+   <div class="loading">
+    <p>Зачекайте</p>
+   </div>
+</form>
+
+<div class="msg"></div>
+
+</body>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/js.js"></script>
+
+</html>
+
