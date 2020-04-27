@@ -26,11 +26,11 @@ try {
     $mail->Password   = 'ivan123123'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ii7961350@gmail.com', 'Vasja'); // Адрес самой почты
+    $mail->setFrom('ii7961350@gmail.com', 'Ivan'); // Адрес самой почты
 
     // Отримувач листа
 	$mail->addAddress('cord811@hotmail.com');
-	$mail->addAddress('frankivslava@gmail.com');     
+	//$mail->addAddress('frankivslava@gmail.com');     
 
     // Прикріплення файлів до листа
 if (!empty($_FILES['myfile']['name'][0])) {
@@ -50,7 +50,7 @@ if (!empty($_FILES['myfile']['name'][0])) {
         // -----------------------
         $mail->isHTML(true);
     
-        $mail->Subject = "З сайту: <b>Тест форми</b>";
+        $mail->Subject = "З сайту: Тест форми";
         $mail->Body    = "<b>Ім'я:</b> $name <br>
 		<b>Пошта:</b> $email<br>
 		<b>Телефон:</b> $phone<br><br>
